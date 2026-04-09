@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Mans datorikas portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/mansStils.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h1 id="sākums">Mans datorikas portfolio</h1>
+<div class="navbar">
+  <a href="#Sākums">Sākums</a>
+  <a href="#Ta">Tekstapstrāde</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Attēlu apstrāde
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="#Rg">Rastra grafika</a>
+    <a href="#Vg">Vektorgrafika</a>
+  </div>
+  </div> 
+  <a href="#3D">3D modelēšana</a>
+  <a href="#Vt">Video</a>
+  <a href="#Il">Izklājlapas</a>
+  <a href="otrais.html">Individuālo tēmu</a>
+  <div class="dropdown">
+        <button class="dropbtn" onclick="selfFunction()">Uzdevumi
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="selfdropdown">
+            <a href="forma.html">forma.html</a>
+            <a href="dzerdaudz.html">dzerdaudz.html</a>
+            <a href="dzer.html">dzer.html</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="Function()">Pārbaudes darbs
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="Dropdown">
+            <a href="baiti.html">baiti.html</a>
+            <a href="skola.html">skola.html</a>
+            <a href="dzd.html">dzd.html</a>
+        </div>
+    </div> 
+</div>
+        <h2>Ko esmu līdz šim iemācijies un mācijies?</h2>
+        <ul>
+            <li>Tekstapstrādi</li>
+            <li>Attēlu apstrādi
+                <ul>
+                    <li>Rastra grafiku</li>
+                    <li>Vektorgrafiku</li>
+                </ul>
+            </li>
+            <li>3D modelēšanu</li>
+            <li>Video taisīšanu</li>
+            <li>Strādāt ar izklājlapām</li>
+        </ul>
+        <hr>
+        <h2 id="Ta">Tekstapstrāde</h2>
+<div class="imageflex">
+    <p class="imageflexcontent">Tika apgūta tekstapstrāde MS Word lietotnē. Tajā mēs mācijāmies par lappuses iekārtojumu, tabulēšanu.</p>
+<img src="../images/Word.png" height="280px" style="margin-left:10px;">
+</div>
+  
+        <hr>
+        <h2>Attēlu apstrāde</h2>
+        <h3 id="Rg">Rastra grafika</h3>
+        <hr><!-- comment -->
+        <h3 id="Vg">Vektorgrafika</h3>
+        <hr>
+        <h2 id="3D">3D modelēšana</h2>
+        <hr>
+        <h2 id="Vt">Video taisīšana</h2>
+        <hr>
+        <h2 id="Il">Izklājlapas</h2>
+        <form>
+        <label>aprēķini.xlsx</label>
+        <button><a href="../faili/aprēķini.xlsx">Download</a></button>
+        </form>
+    <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+};
+function Function() {
+  document.getElementById("Dropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var Dropdown = document.getElementById("Dropdown");
+    if (Dropdown.classList.contains('show')) {
+      Dropdown.classList.remove('show');
+    }
+  }
+};
+function selfFunction() {
+  document.getElementById("selfdropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var selfdropdown = document.getElementById("selfdropdown");
+    if (selfdropdown.classList.contains('show')) {
+      selfdropdown.classList.remove('show');
+    }
+  }
+};
+    </script>
+    </body>
+</html>

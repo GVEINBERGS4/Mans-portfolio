@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../css/mansStils.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h1>Individuālā tēma</h1>
+        <div class="navbar">
+  <a href="index.html">Sākums</a>
+  <a href="index.html#Ta">Tekstapstrāde</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Attēlu apstrāde
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="index.html#Rg">Rastra grafika</a>
+    <a href="index.html#Vg">Vektorgrafika</a>
+  </div>
+  </div> 
+  <a href="index.html#3D">3D modelēšana</a>
+  <a href="index.html#Vt">Video</a>
+  <a href="index.html#Il">Izklājlapas</a>
+  <a href="#teksts_zemāk">Teksts par indiviuālo tēmu</a>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="Function()">Uzdevumi
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="dropdown">
+            <a href="forma.html">forma.html</a>
+            <a href="dzerdaudz.html">dzerdaudz.html</a>
+            <a href="dzer.html">dzer.html</a>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn" onclick="Function()">Pārbaudes darbs
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="Dropdown">
+            <a href="baiti.html">baiti.html</a>
+            <a href="skola.html">skola.html</a>
+            <a href="dzd.html">dzd.html</a>
+        </div>
+    </div> 
+</div>
+        <h2>Kā pārbaudīt informācijas avotu uzticamību?</h2>
+        <p id="teksts_zemāk">Parbaudi</p>
+        <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+};
+function Function() {
+  document.getElementById("Dropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var Dropdown = document.getElementById("Dropdown");
+    if (Dropdown.classList.contains('show')) {
+      Dropdown.classList.remove('show');
+    }
+  }
+};
+function Function() {
+  document.getElementById("dropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var Dropdown = document.getElementById("dropdown");
+    if (Dropdown.classList.contains('show')) {
+      Dropdown.classList.remove('show');
+    }
+  }
+};
+    </script>
+    </body>
+</html>
