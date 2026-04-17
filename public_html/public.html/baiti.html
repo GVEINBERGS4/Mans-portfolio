@@ -2,24 +2,59 @@
 <html>
 <head>
 <style>
-img {
-  float: right;
-  margin-left: 15px;
-  width: 200px;
-  height: 200px;  
+div {  
+    width: 35%;
+  border: 2px solid blue;
+  padding: 5px;
+  margin: 5px;
 }
 </style>
 </head>
 <body>
+    <div>
+        <form id="kaste">
+        <p>Aprēķināt cik daudz informācijas var lejuplādēt</p>
+            <input type="text" id="sek" onfocus="reset()">
+            <label>sekundēs, ja interneta ātrums ir 25 Mbps.</label>
+        <p>Atbilde</p>
+        <input type="text" id="rez">
+        <label><input type="radio" name="izvele" value="KiB" onclick="rekini()">KiB</label>
+        <label><input type="radio" name="izvele" value="KB" onclick="rekini()">KB</label>
+        </form>
+    </div>
+    <script>
+function rekini() {
+    let sek = document.getElementById("sek").value;
+    let radios = document.getElementsByName("izvele");
+    let vieniba = "";
 
-<h2>CSS float: right</h2>
+    for (let i of radios) {
+        if (i.checked) {
+            vieniba = i.value;
+        }
+    }
 
-<p>In this example, the image will float to the right in the div, and the text will wrap around the image.</p>
+    if (sek === "") {
+        document.getElementById("rez").value = "";
+        return;
+    }
 
-<div>
-<img src="pineapple.jpg" alt="Pineapple" width="300" height="300">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
-</div>
+    let MBps = 25 * 1000000 * sek;
+    let MB = MBps / 8;
 
+    let rezultats;
+
+    if (vieniba === "KB") {
+        rezultats = MB / 1000;
+    } else {
+        rezultats = MB / 1024;
+    }
+    document.getElementById("rez").value = parseFloat(rezultats.toFixed(4));
+    
+    function reset() {
+    document.getElementById("kaste").reset();
+}
+}
+</script>
 </body>
 </html>
