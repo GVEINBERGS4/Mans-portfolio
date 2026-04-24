@@ -1,8 +1,4 @@
 Mans portfolio
-## 🌐 Live Site
 [Visit my portfolio](https://GVEINBERGS4.github.io/Mans-portfolio)
-
-## 📝 Commits
 [View all commits](https://github.com/GVEINBERGS4/Mans-portfolio/commits)
-
 [View recent activity](https://github.com/GVEINBERGS4/Mans-portfolio/network)
