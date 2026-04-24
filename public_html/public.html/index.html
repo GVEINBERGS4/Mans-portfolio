@@ -46,27 +46,33 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <a href="baiti.html">baiti.html</a>
             <a href="skola.html">skola.html</a>
             <a href="dzd.html">dzd.html</a>
+            <a href="mervienibas.html">mervienibas.html</a>
         </div>
     </div> 
 </div>
         <h2>Ko esmu līdz šim iemācijies un mācijies?</h2>
         <ul>
-            <li>Tekstapstrādi</li>
+            <li>Tekstapstrādi (MS Word)</li>
             <li>Attēlu apstrādi
                 <ul>
-                    <li>Rastra grafiku</li>
-                    <li>Vektorgrafiku</li>
+                    <li>Rastra grafiku (GIMP)</li>
+                    <li>Vektorgrafiku (Inkscape)</li>
                 </ul>
             </li>
-            <li>3D modelēšanu</li>
-            <li>Video taisīšanu</li>
-            <li>Strādāt ar izklājlapām</li>
+            <li>3D modelēšanu (Tinkercad)</li>
+            <li>Video taisīšanu (Pēc izvēles, es lietoju CapCut)</li>
+            <li>Strādāt ar izklājlapām (Excel)</li>
         </ul>
-        <hr>
-        <h2 id="Ta">Tekstapstrāde</h2>
-<div class="imageflex">
-    <p class="imageflexcontent">Tika apgūta tekstapstrāde MS Word lietotnē. Tajā mēs mācijāmies par lappuses iekārtojumu, tabulēšanu.</p>
-<img src="../images/Word.png" height="280px" style="margin-left:10px;">
+        <hr id="Ta">
+<div class="box">
+    <h2>Tekstapstrāde</h2>
+    <div class="content">
+    <p class="imageflexcontent">Tika apgūta tekstapstrāde MS Word lietotnē. Tajā mēs mācijāmies par lappuses iekārtojumu, tabulēšanu, kā arī veidot, rediģēt un formatēt dokumentus.</p>
+    <img src="../images/Word.png" onclick="openImage(this)">
+</div>
+</div>
+        <div id="overlay" onclick="closeImage()">
+  <img id="overlayImg">
 </div>
   
         <hr>
@@ -126,6 +132,14 @@ window.onclick = function(e) {
     }
   }
 };
+function openImage(img) {
+  document.getElementById("overlayImg").src = img.src;
+  document.getElementById("overlay").style.display = "flex";
+}
+
+function closeImage() {
+  document.getElementById("overlay").style.display = "none";
+  }
     </script>
     </body>
 </html>

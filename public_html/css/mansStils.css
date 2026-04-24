@@ -80,12 +80,56 @@ body{
 p{
     font-size: 15px;
 }
-.imageflex { 
-    display: flex;
-margin-left:25%;
-margin-right:25%;
-background-color:lightgray;
-border:lightgray;
-border-width:10px;
+.box {
+  width: 60%;
+  height:35%;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: rgb(200, 200, 200);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s ease;
 }
-.imageflexcontent { margin-left: 5px; margin-top: 0; }
+
+.box h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.content {
+  display: flex;  
+  align-items: center;
+  gap: 15px;
+}
+.content p {
+      font-size:140%;
+}
+
+.content img {
+  width: 25%;
+  height: auto;
+}
+.box:hover {
+transform: scale(1.2);
+}
+#overlay {
+  display: none;
+  position: fixed;   /* FULL SCREEN */
+  inset: 0;          /* replaces top/left/width/height */
+  background: rgba(0, 0, 0, 0.8);
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999999;
+}
+
+#overlay img {
+  max-width: 90%;
+  max-height: 90%;
+}
+li {
+    font-size:17px;
+}

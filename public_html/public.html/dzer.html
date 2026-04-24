@@ -25,14 +25,12 @@
 function maksa(){
     let dz = document.getElementsByName('drink');
     let selectedValue = "";
-
     for(let i = 0; i < dz.length; i++) {
        if(dz[i].checked) {
            selectedValue = dz[i].value;
            break;
        }
     }
-
     let rez = document.getElementById("rezultats");
     if(selectedValue !== "") {
         rez.innerHTML = selectedValue;
